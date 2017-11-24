@@ -1,5 +1,5 @@
 /* UNIVERSAL DEBUG ------------------ */
-/* This portion is used for experimental purposes and this portion must be empty when deployed */ /* 
+/* This portion is used for experimental purposes and this portion must be empty when deployed */ /*
 *{
 
 }
@@ -79,7 +79,10 @@ aside{}
 /* LAYER-3 > EDGE-elements (ANY rules except color) */
   /* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
       usually it contains elements holding data or information to be displayed and rendered for viewers
-      any rules can be applied on these containers, also items must be constructed according to the flow of HTML */
+      any rules can be applied on these containers, also items must be constructed according to the flow of HTML
+      since L3 elements are the farthest elements, they could be selected uniquely without a class-name
+      class-naming is only applied when necessary, specially for div elements with special purpose other
+      than containing child elements*/
 header h1:last-child{
   margin: initial;
 }
@@ -126,7 +129,7 @@ main{
 
 
 
-/* CSS Template version 1.0 - 20171122 ++++++++++++++++++++++++++++++++++++++ */
+/* CSS3 Template version 1.0 - 20171122 +++++++++++++++++++++++++++++++++++++ */
 /*  Developer: Michael James Turiano Albatana                                 */
 /*  Email: mjtalbatana@gmail.com                                              */
 /*  Github: https://github.com/mjtalbatana                                    */
