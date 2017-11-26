@@ -6,7 +6,9 @@
 */
 
 /* FONT-FACE */
-@font-face{}
+@font-face{
+
+}
 
 /* UNIVERSAL DEFAULTS */
 /* the purpose of separating universal selector is to make a distinction to CSS rules that is permanently applied */
@@ -14,18 +16,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* border: 0.5px solid red; */
+  color: red;
+  font-family: Helvetica, sans-serif
 }
-h1{}
-h2{}
-h3{}
-h4{}
-h5{}
-h6{}
-p{}
-div{}
-li{}
-img{}
-a{}
+ul{
+  list-style: none;
+}
 
 /* CONTAINERS */
 /* these contains rules related to dimensions & positioning only
@@ -37,61 +34,125 @@ a{}
       these elements must have additional class assign
       MAJOR CONTAINERS MUST BE BLOCK-TYPE */
 body{
-  display: block;
-  clear: both;
-  width: auto;
-  height: auto;
-  padding: auto auto auto auto;
-  border-width: 0 0 0 0;
-  margin: auto auto auto auto;
-}
-.body2{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 
+  width: 100%;
+  height: auto;
+  padding: 0;
+  border-width: 0;
+  margin: 0 auto;
 }
-header{}
-footer{}
-nav{}
-main{}
-section{}
-aside{}
-.container01{}
-.container02{}
-.container03{}
-.container04{}
-.container05{}
+.body{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+
+  width: 90%;
+  height: auto;
+}
+header.L1{
+  display: column;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+
+  width: 100%;
+  height: auto;
+}
+
+main.L1{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+
+  width: 100%;
+  height: auto;
+}
+footer.L1{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+
+  width: 100%;
+  height: auto;
+}
+
 
 /* LAYER-2 > MINOR CONTAINERS (metric properties) */
   /* these can contain elements for the purpose of containing END-containers,
       each container must be attached according to their parent containers
       it is possible to contain another create branched containers for layer-3 containers
       rules can contain Dimensions & Positioning only */
-.subcontainer01{}
-.subcontainer02{}
-.subcontainer03{}
-.subcontainer04{}
-.subcontainer05{}
-.subcontainer06{}
-.subcontainer07{}
-.subcontainer08{}
-.subcontainer09{}
-.subcontainer10{}
 
-/* LAYER-3 > EDGE-elements (ANY rules except color) */
+footer.footer-lft-upper,
+footer.footer-lft-lower,
+footer.footer-rgt-upper,
+footer.footer-rgt-lower{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+
+}
+footer > .footer-icons{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+
+}
+
+
+      /* LAYER-3 > EDGE-elements (ANY rules except color) */
   /* literally, the end-containers, in which the element is at the end of the family branch (at the edge)
       usually it contains elements holding data or information to be displayed and rendered for viewers
       any rules can be applied on these containers, also items must be constructed according to the flow of HTML
       since L3 elements are the farthest elements, they could be selected uniquely without a class-name
       class-naming is only applied when necessary, specially for div elements with special purpose other
       than containing child elements*/
-header h1:last-child{
-  margin: initial;
-}
-nav li:last-child{
-  padding: initial;
-  border-width: 1px;
-  border-style: solid;
-}
-p:last-child{
+
+.footer-icons img,
+.footer-icons object{
+  width: auto;
+  height: 32px;
+  margin: 2px;
 
 }
 
@@ -106,10 +167,10 @@ p:last-child{
       assign those elements to a particular color-group,
       must be coded from parent to the child elements/containers */
 body{
-  background: hsla(0, 1%, 0%, 1.0);
+  background: rgb(255, 255, 255);
 }
 .body2{
-  background: hsla(0, 1%, 100%, 1.0)
+  background: rgb(101, 101, 101)
 }
 main{
   background: hsla(0, 1%, 0%, 1.0);
@@ -125,11 +186,16 @@ main{
 }
 
 /* HOVER-effects */
+.footer-icons a:hover{
+  filter:
+  saturate(80%)
+  contrast(50%);
+
+}
 
 
 
-
-/* CSS3 Template version 1.0 - 20171122 +++++++++++++++++++++++++++++++++++++ */
+/* CSS3 Template version 1.1 - 20171125 +++++++++++++++++++++++++++++++++++++ */
 /*  Developer: Michael James Turiano Albatana                                 */
 /*  Email: mjtalbatana@gmail.com                                              */
 /*  Github: https://github.com/mjtalbatana                                    */
