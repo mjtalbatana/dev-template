@@ -16,8 +16,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* border: 0.5px solid red; */
-  color: red;
+  color: white;
   font-family: Helvetica, sans-serif
 }
 ul{
@@ -157,33 +156,38 @@ footer > .footer-icons{
 }
 
 
-
-
-
-
-
 /* COLOR & BACK-IMAGE */
   /* To make coloring less hassle, determine the elements with same color values,
       assign those elements to a particular color-group,
       must be coded from parent to the child elements/containers */
 body{
-  background: rgb(255, 255, 255);
+  background: hsl(0, 0%, 0%);
 }
-.body2{
-  background: rgb(101, 101, 101)
+.body{
+  background: hsl(0, 1%, 10%);
 }
 main{
   background: hsla(0, 1%, 0%, 1.0);
 }
-.color-border01{
-  border-color: hsla(0, 0, 0%, 0.0);
+
+/* RWD FUNCTION ---------------------------------- */
+/* MOBILE DEVICES +++++++++++++++++++++ */
+@media only screen and (max-width: 400px){
+
 }
-.color-font01{
-  color: hsla(0, 0, 0%, 0.0);
+
+
+/* TABLET DEVICES  ++++++++++++++++++++++ */
+@media only screen and (min-width: 401px){
+
 }
-.color-backg01{
-  background: hsla(0, 0, 0%, 0.0);
+
+
+/* DESKTOP DEVICES ++++++++++++++++++++++ */
+@media only screen and (min-width: 961px){
+
 }
+
 
 /* HOVER-effects */
 .footer-icons a:hover{
