@@ -152,14 +152,13 @@ footer > .footer-icons{
   width: auto;
   height: 32px;
   margin: 2px;
-
 }
 
 
 /* COLOR & BACK-IMAGE */
-  /* To make coloring less hassle, determine the elements with same color values,
-      assign those elements to a particular color-group,
-      must be coded from parent to the child elements/containers */
+/* To make coloring less hassle, determine the elements with same color values,
+assign those elements to a particular color-group,
+must be coded from parent to the child elements/containers */
 body{
   background: hsl(0, 0%, 0%);
 }
@@ -168,6 +167,12 @@ body{
 }
 main{
   background: hsla(0, 1%, 0%, 1.0);
+}
+.hosting{
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: hsl(0, 0%, 0%);
 }
 
 /* RWD FUNCTION ---------------------------------- */
