@@ -6,6 +6,6 @@ echo
 <!-- Email: mjtalbatana@gmail.com                           -->
 <!-- Github: https://github.com/mjtalbatana                 -->
 <!-- LinkedIn: https://www.linkedin.com/in/mjtalbatana      -->
-<!-- END OF HTML FILE ======================================-->
+<!-- END OF FILE ===========================================-->
 "
 ?>
