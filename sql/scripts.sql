@@ -55,3 +55,17 @@ ALTER TABLE playlists
     ON UPDATE CASCADE
     ON DELETE RESTRICT
   );
+
+
+CREATE TABLE songs(
+  id INT AUTO_INCREMENT NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  length INT,
+  genre VARCHAR(255),
+  album_id INT,
+  PRIMARY KEY(id),
+  FOREIGN KEY(album_id)
+    REFERENCES albums(id)
+    ON UPDATE CASCADE
+    ON DELETE RESTRICT
+);
