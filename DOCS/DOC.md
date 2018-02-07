@@ -249,6 +249,5 @@ Constant arrays
 | SQL             | ISO/IEC 9075
 
 
-
 #### 2.2.3 Server File Directory Structure
 
