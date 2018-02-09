@@ -4,7 +4,7 @@
 
 1. Introduction
   1.1 Project overview
-  1.2 Project development eam
+  1.2 Project development team
   1.3 Project objective
   1.4 Project requirements & specifications
   1.5 Project scopes & limitations
