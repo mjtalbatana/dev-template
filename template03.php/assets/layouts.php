@@ -1,8 +1,7 @@
 <?php
-
 function fn_layout_head(){
-  $_SESSION['webtitle'] = str_replace('.php','',basename($_SERVER['PHP_SELF']));
-  echo "
+  $_SESSION['webtitle'] = str_replace('.php','',basename(htmlspecialchars($_SERVER['PHP_SELF'])));
+  $string = "
     <meta charset=\"utf-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">
     <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\">
@@ -11,7 +10,9 @@ function fn_layout_head(){
     <link rel=\"stylesheet\" href=\"assets/scss/style.css\" type=\"text/css\">
     <script language=\"javascript\" src=\"assets/js/script.js\" defer></script>
     <script language=\"javascript\" src=\"assets/js/interactive.js\" defer></script>
-    <script language=\"javascript\" src=\"assets/js/animation.js\" defer></script>";
+    <script language=\"javascript\" src=\"assets/js/animation.js\" defer></script>
+    ";
+  echo $string;
   }
 
 function fn_layout_main(){
@@ -30,7 +31,9 @@ function fn_layout_libraries(){
 }
 
 function fn_layout_signature(){
-  echo "
+
+  $string = file_get_contents()
+  "
   <!-- Web Template (integrated) version 1.8 20180202 =================+-->
   <!-- Developer: Michael James Turiano Albatana                       |-->
   <!-- Language: HTML, CSS, SASS/SCSS, JS, PHP                         |-->
@@ -42,6 +45,13 @@ function fn_layout_signature(){
   <!-- Github: https://github.com/mjtalbatana                          |-->
   <!-- LinkedIn: https://www.linkedin.com/in/mjtalbatana               |-->
   <!-- END OF SIGNATURE ===============================================+-->
+  ";
+  echo $string;
+}
+
+function fn_layout_important_stuff(){
+  echo "
+
   ";
 }
 ?>
