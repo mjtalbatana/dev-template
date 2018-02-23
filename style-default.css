@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Noto Sans';
+  src: url("https://fonts.googleapis.com/css?family=Noto+Sans&subset=latin-ext");
+  src: url("https://fonts.googleapis.com/css?family=Noto+Sans&subset=latin-ext&effect=outline");
+}
+
+* {
+  font-family: Helvetica, 'Noto Sans', sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+  z-index: 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+/*# sourceMappingURL=style-default.css.map */
