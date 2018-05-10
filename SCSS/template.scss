@@ -1,0 +1,142 @@
+// REFERENCE: REF-DOC05
+// TEMPLATE CODE: TEMPLATE-SCSS
+// VERSION: v0.0.0.0
+// 0. GUIDELINES-----------------------------------------------------
+//  this guideline are defined and specified in the documentation: REF-D05
+//  for more information & updates please visit the documentation at GitHub repository
+//  https://github.com/mjtalbatana/ref-template
+//  0.1 avoid applying CSS-rules for static styling:
+//    - any transform rules, functions, or methods
+//      - workaround: transformations are processed by JavaScript
+//    - position, top, bottom, left, right rules
+//  0.2 minimize nesting
+//  0.3 prioritize general scopes
+//  0.4 rules with different responsive rules must be contained in one css-rule nest
+
+//===================================================================
+// 1. VARIABLES & ASSIGNMENT-----------------------------------------
+
+$color0: black;
+
+$bgcolor0: white;
+
+$font0: 'Helvetica';
+
+//===================================================================
+//  1.1 FONT IMPORT--------------------------------------------------
+
+@font-face{
+
+}
+
+//===================================================================
+//  1.2 PRESETS------------------------------------------------------
+
+@mixin landscape{
+  @media only screen and (orientation: landscape){
+    @content;
+  }
+}
+
+@mixin portrait{
+  @media only screen and (orientation: portrait){
+    @content;
+  }
+}
+
+
+//===================================================================
+//  1.3 UNIVERSAL DEFAULTS-------------------------------------------
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: 100%;        // ensures all elements will occupy 100% width
+  height: auto;
+  font-family: $font0;
+  color: $color0;
+  text-align: center;
+  user-select: none;  // prevents highlighting of elements
+
+  li{
+    list-style: none;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  body{
+    background-color: $bgcolor0;
+  }
+}
+
+//===================================================================
+//===================================================================
+//  1.4 MASS ASSIGNMENTS---------------------------------------------
+%display-table{
+  display: table;
+}
+
+%display-grid{
+  display: grid;
+}
+
+%display-flex{
+  display: flex;
+}
+
+//===================================================================
+//===================================================================
+// 2. VIEWPORT SENSITIVE RULES---------------------------------------
+//  **RESTRICTIONS: dimensional units: vh, vw
+//  2.1 GRID----------------------------------------------------------
+//
+
+//===================================================================
+//  2.2 FLEX---------------------------------------------------------
+
+//===================================================================
+//  2.3 TABLE--------------------------------------------------------
+
+
+//===================================================================
+//  2.4 CSS-BOX-MODEL------------------------------------------------
+//    **MARGIN, BORDER, PADDING, SIZE--------------------------------
+
+//===================================================================
+//===================================================================
+// 3. NON-CONTAINING ELEMENTS----------------------------------------
+//  3.1 FONT-SIZE----------------------------------------------------
+//  **RESTRICTIONS: dimensional units: vh, vw
+
+//  3.2 FONT ASSIGNMENT FOR NON-DEFAULTS-----------------------------
+.emoji{
+  font-family: 'Noto Emoji';
+}
+
+//  3.3 FONT-EFFECTS-------------------------------------------------
+
+//  3.4 HEADERS------------------------------------------------------
+
+//  3.5 SUBHEADERS---------------------------------------------------
+
+//  3.6 TEXT-BLOCK---------------------------------------------------
+
+//  3.7 TEXT-INLINE--------------------------------------------------
+
+//  3.8 IMAGES-------------------------------------------------------
+
+//  3.8 OTHER MEDIA--------------------------------------------------
+
+//===================================================================
+// 4. CSS ANIMATION -------------------------------------------------
+
+//===================================================================
+// 5. SPECIAL RULES--------------------------------------------------
+
+//===================================================================
