@@ -1,5 +1,4 @@
 <?php
-
 function phpLayout($section){
   switch($section){
     case 'head':
@@ -16,6 +15,11 @@ function phpLayout($section){
         <script language=\"javascript\" src=\"assets/js/animation.js\" defer></script>
         ";
       break;
+
+    case 'nav':
+
+      break;
+
 
     case 'main':
       break;
@@ -40,3 +44,4 @@ function phpLayout($section){
   }
 }
 ?>
+

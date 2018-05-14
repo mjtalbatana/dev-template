@@ -7,9 +7,15 @@
   <head>
     <?php phpLayout('head')?>
   </head>
-  <body>
+
+    <?php phpLayout('body')?>
+
+  <body id="body-index" onload="jsOnLoad()">
+    <nav>
+      <?php phpLayout('nav')?>
+    </nav>
     <main>
-        This is just a template
+      <?php phpLayout('main')?>
     </main>
     <footer>
       <?php phpLayout('footer')?>
