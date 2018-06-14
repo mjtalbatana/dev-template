@@ -23,9 +23,8 @@
 > > > GitHub: [https://github.com/mjtalbatana](https://github.com/mjtalbatana)  
 >
 
-## LICENSE
+## COPYRIGHT NOTICE
 
-> > This documentation is licensed under the MIT permissive license which is located the same directory of this documentation file.  
-> > For more information about the license, please visit: [opensource.org](https://opensource.org/licenses/MIT)  
+This documentation, including the whole documentation suite to which this document is a subset, is under study and evaluation. Copyright notice is subject to change. It is always a 'common courtesy' to contact the author before using this document other than its sole-purpose to be publicly viewed/reviewed/modified on the GitHub repository. Thank you.
 
 ---
