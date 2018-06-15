@@ -104,84 +104,84 @@ $font-helvetica: 'Helvetica';
   }
 }
 
-@mixin gridarea($w, $x, $y, $z){
-  grid-area: $w #{'/'} $y #{'/'} $x #{'/'} $z;
+@mixin gridarea($row1, $row2, $col1, $col2){
+  grid-area: $row1 #{'/'} $col1 #{'/'} $row2 #{'/'} $col2;
 }
 
 @mixin flex(
-    $v:row nowrap,
-    $w:center,
-    $x:center,
-    $y:space-between,
-    $z:center
+    $flex-flow:row nowrap,
+    $justify-content:center,
+    $justify-items:center,
+    $align-content:space-between,
+    $align-items:center
   ){
-    flex-flow: $v;          //  row/column/row-reverse/columen-reverse  wrap/nowrap/wrap-reverse
-    justify-content: $w;    //  start  center  space-between  space-around  space-evenly
-    justify-items: $x;      //  stretch  center  start  end
-    align-content: $y;      //  start  center  space-between  space-around  space-evenly
-    align-items: $z;        //  stretch  center  start  end
+    flex-flow: $flex-flow;              //  row/column/row-reverse/columen-reverse  wrap/nowrap/wrap-reverse
+    justify-content: $justify-content;  //  start  center  space-between  space-around  space-evenly
+    justify-items: $justify-items;      //  stretch  center  start  end
+    align-content: $align-content;      //  start  center  space-between  space-around  space-evenly
+    align-items: $align-items;          //  stretch  center  start  end
 }
 
 @mixin dimensions(
-    $v:100%,
-    $w:auto,
-    $x:0,
-    $y:0,
-    $z:0 auto
+    $width:100%,
+    $height:auto,
+    $padding:0,
+    $borderwidth:0,
+    $margin:0 auto
   ){
-    width: $v;
-    height: $w;
-    padding: $x;
-    border-width: $y;
-    margin: $z;
+    width: $width;
+    height: $height;
+    padding: $padding;
+    border-width: $border-width;
+    margin: $margin;
 }
 
 @mixin backgroundimage(
-    $t:cover,
-    $u:padding-box,
-    $v:padding-box,
-    $w:inherit,
-    $x:ro-repeat,
-    $y:center,
-    $z:transparent
+    $background-size:cover,
+    $background-clip:padding-box,
+    $background-origin:padding-box,
+    $background-attachment:inherit,
+    $background-repeat:ro-repeat,
+    $background-position:center,
+    $background-color:transparent
   ){
-    background-size: $t;            //  contain  cover  [%]  [absolute]
-    background-clip: $u;            //  border-box  padding-box  content-box  text
-    background-origin: $v;          //  border-box  padding-box  content-box
-    background-attachment: $w;      //  scroll  fixed  local  local,scroll  scroll,local
-    background-repeat: $x;          //  repeat  repeat-x  repeat-y  space  round  no-repeat
-    background-position: $y;        //  top  left  center  [absolute-X/Y]  [relative-X/Y]
-    background-color: $z;           //
+    background-size: $background-size;              //  contain  cover  [%]  [absolute]
+    background-clip: $background-clip;              //  border-box  padding-box  content-box  text
+    background-origin: $background-origin;          //  border-box  padding-box  content-box
+    background-attachment: $background-attachment;  //  scroll  fixed  local  local,scroll  scroll,local
+    background-repeat: $background-repeat;          //  repeat  repeat-x  repeat-y  space  round  no-repeat
+    background-position: $background-position;      //  top  left  center  [absolute-X/Y]  [relative-X/Y]
+    background-color: $background-color;            //
 }
 
 @mixin overflow(
-    $y:hidden,
-    $z:hidden
+    $overflow-x:hidden,
+    $overflow-y:hidden
   ){
-    overflow-x: $y;   //  visible  hidden  scroll  auto
-    overflow-y: $z;   //  visible  hidden  scroll  auto
+    overflow-x: $overflow-x;   //  visible  hidden  scroll  auto
+    overflow-y: $overflow-y;   //  visible  hidden  scroll  auto
 }
 
 @mixin textcontainer(
-    $r:justify,
-    $s:normal,
-    $t:inherit,
-    $u:normal,
-    $v:normal,
-    $w:normal,
-    $x:auto,
-    $y:break-all,
-    $z:break-word
+    $text-align:justify,
+    $line-height:normal,
+    $text-indent:inherit,
+    $letter-spacing:normal,
+    $word-spacing:normal,
+    $white-space:normal,
+    $hyphens:auto,
+    $word-break:break-all,
+    $overflow-wrap:break-word
   ){
-    text-align: $r;       //  left  right  center  justify  justify-all  start  end  match-parent
-    line-height: $s;      //  normal  [decimal]  [%]  [units]
-    text-indent: $t;      //  [%] [units]  each-line  hanging
-    letter-spacing: $u;   //  normal [units]
-    word-spacing: $v;     //  normal  [%]  [units]  [-units]
-    white-space: $w;      //  normal  nowrap  pre  pre-wrap  pre-line
-    hyphens: $x;           //  none  manual  auto
-    word-break: $y;       //  normal  break-all  keep-all  break-word
-    overflow-wrap: $z;     // normal break-word
+    text-align: $text-align;       //  left  right  center  justify  justify-all  start  end  match-parent
+    line-height: $line-height;      //  normal  [decimal]  [%]  [units]
+    text-indent: $text-indent;      //  [%] [units]  each-line  hanging
+    letter-spacing: $letter-spacing;   //  normal [units]
+    word-spacing: $word-spacing;     //  normal  [%]  [units]  [-units]
+    white-space: $white-space;      //  normal  nowrap  pre  pre-wrap  pre-line
+    hyphens: $hyphens;           //  none  manual  auto
+    word-break: $word-break;       //  normal  break-all  keep-all  break-word
+    overflow-wrap: $overflow-wrap;     // normal break-word
 }
 
 @mixin textspan(
@@ -191,27 +191,27 @@ $font-helvetica: 'Helvetica';
 }
 
 @mixin position(
-    $u:0,
-    $v:static,
-    $w:auto,
-    $x:auto,
-    $y:auto,
-    $z:auto
+    $z-index:0,
+    $position:static,
+    $top:auto,
+    $right:auto,
+    $bottom:auto,
+    $left:auto
   ){
-    z-index: $u;    //  0  [integer]  auto
-    position: $v;   //  static  relative  absolute  sticky  fixed
-    top: $w;        //  auto  0  [unit]  [-unit]
-    right: $x;      //  auto  0  [unit]  [-unit]
-    bottom: $y;     //  auto  0  [unit]  [-unit]
-    left: $z;       //  auto  0  [unit]  [-unit]
+    z-index: $z-index;    //  0  [integer]  auto
+    position: $position;   //  static  relative  absolute  sticky  fixed
+    top: $top;        //  auto  0  [unit]  [-unit]
+    right: $right;      //  auto  0  [unit]  [-unit]
+    bottom: $bottom;     //  auto  0  [unit]  [-unit]
+    left: $left;       //  auto  0  [unit]  [-unit]
 }
 
 @mixin floatclear(
-    $y:none,
-    $z:none
+    $float:none,
+    $clear:none
   ){
-    float: $y;  //  none  left  right  inline-start  inline-end
-    clear: $z;  //  none  left  right  both  inline-start  inline-end
+    float: $float;  //  none  left  right  inline-start  inline-end
+    clear: $clear;  //  none  left  right  both  inline-start  inline-end
 }
 //===================================================================
 //  1.3 UNIVERSAL DEFAULTS-------------------------------------------
