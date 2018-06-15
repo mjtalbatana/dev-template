@@ -306,13 +306,23 @@ $font-helvetica: 'Helvetica';
 //===================================================================
 // 5. FONTS----------------------------------------
 //
-//  5.1 FONT ASSIGNMENT FOR NON-DEFAULTS-----------------------------
+// 5.1 FONT ASSIGNMENT FOR NON-DEFAULTS-----------------------------
 .emoji{
   font-family: 'Noto Emoji';
 }
 
 // 5.2 FONT-SIZE----------------------------------------------------
 // **RESTRICTIONS: dimensional units: vh, vw
+
+h1{
+  font-size: 10vh;
+}
+h2,
+h3,
+h4{
+  font-size: 7vh;
+}
+
 
 // 5.3 FONT-EFFECTS-------------------------------------------------
 
